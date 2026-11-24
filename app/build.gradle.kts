@@ -142,3 +142,16 @@ dependencies {
   // "ksp"(libs.androidx.room.compiler)
   // "ksp"(libs.moshi.kotlin.codegen)
 }
+
+// Keep a continuously updated copy at <projectRoot>/debug/debug.apk after every assembleDebug
+// without changing the standard Gradle APK output location.
+val syncDebugApk by tasks.registering(Copy::class) {
+  from(layout.buildDirectory.file("outputs/apk/debug/app-debug.apk"))
+  into(rootProject.layout.projectDirectory.dir("debug"))
+  rename { "debug.apk" }
+}
+
+tasks.matching { it.name == "assembleDebug" }.configureEach {
+  finalizedBy(syncDebugApk)
+}
+
