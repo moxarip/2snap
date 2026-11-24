@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">Double Tap Wake</string>
+
+    <!-- Navigation & Common -->
+    <string name="cd_open_settings">Open settings</string>
+    <string name="cd_navigate_back">Navigate back</string>
+    <string name="cd_power_toggle">Toggle Double Tap Wake</string>
+    <string name="cd_status_icon">Service status indicator</string>
+    <string name="cd_close_dialog">Close test panel</string>
+    <string name="action_close">Close</string>
+
+    <!-- Main Screen -->
+    <string name="status_enabled">Enabled</string>
+    <string name="status_disabled">Disabled</string>
+    <string name="toggle_on">ON</string>
+    <string name="toggle_off">OFF</string>
+    <string name="subtitle_active_waiting">Monitoring on screen off · Idle while screen is on</string>
+    <string name="subtitle_active_listening">Listening for physical double tap</string>
+    <string name="subtitle_inactive">Tap the switch to activate screen-off tap detection</string>
+    <string name="btn_test">Test</string>
+    <string name="btn_settings">Settings</string>
+    <string name="btn_display_settings">Display Settings</string>
+
+    <!-- How It Works -->
+    <string name="how_it_works_title">How it works</string>
+    <string name="how_it_works_body">Android powers off capacitive touch when the screen is off. This app listens to your hardware motion sensor only while the display is off, detects two crisp physical taps, and briefly wakes the screen via PowerManager before immediately releasing the WakeLock.</string>
+    <string name="no_accelerometer_warning">No hardware accelerometer was detected on this device. Sensor-based tap detection is unavailable.</string>
+
+    <!-- Device & OEM Card -->
+    <string name="device_support_title">Device &amp; Sensor Support</string>
+    <string name="sensor_wakeup_badge">Wake-Up Sensor</string>
+    <string name="sensor_standard_badge">Standard Sensor</string>
+    <string name="sensor_missing_badge">No Accelerometer</string>
+    <string name="proximity_available">Pocket guard ready</string>
+    <string name="proximity_unavailable">No proximity sensor</string>
+    <string name="oem_native_hint_label">Native OEM Option</string>
+    <string name="oem_deep_doze_note">Note: Without a hardware wake-up accelerometer, Android Deep Doze may pause sensors after prolonged idle.</string>
+
+    <!-- Notification -->
+    <string name="notif_channel_name">Double Tap Wake Service</string>
+    <string name="notif_channel_desc">Shows when screen-off double tap monitoring is active.</string>
+    <string name="notif_title_active">Double Tap Wake is active</string>
+    <string name="notif_body_waiting">Idle while screen is on · Ready when screen turns off</string>
+    <string name="notif_body_listening">Listening for double tap · %1$s</string>
+    <string name="notif_action_stop">Turn Off</string>
+    <string name="notif_boot_blocked_title">Resume Double Tap Wake</string>
+    <string name="notif_boot_blocked_body">Android restricted automatic start after reboot. Tap here to resume.</string>
+
+    <!-- Notification Permission Banner -->
+    <string name="notif_permission_title">Notification permission needed</string>
+    <string name="notif_permission_body">Android 13+ requires notification permission to display the background service status.</string>
+    <string name="notif_permission_grant">Allow</string>
+
+    <!-- Test Panel -->
+    <string name="test_sheet_title">Sensor &amp; Wake Test</string>
+    <string name="test_live_section">1. Live Double-Tap Calibration</string>
+    <string name="test_live_hint">Firmly double-tap the screen glass or back of your phone right now to verify your sensitivity setting.</string>
+    <string name="test_state_ready">Waiting for two crisp taps…</string>
+    <string name="test_state_first_tap">Tap 1 detected — tap again!</string>
+    <string name="test_state_double_tap">Double Tap Detected!</string>
+    <string name="test_state_noise">Movement ignored (anti-shake filter)</string>
+    <string name="test_impulse_label">Impulse: %1$.1f m/s² (threshold %2$.1f)</string>
+    <string name="test_wake_section">2. Screen-Off Wake Verification</string>
+    <string name="test_wake_hint">Start the 5-second timer, then immediately press your Power button to turn off the screen. The app will trigger an official PowerManager wake and release the WakeLock.</string>
+    <string name="test_wake_start">Test Wake in 5s</string>
+    <string name="test_wake_cancel">Cancel (%1$ds)</string>
+    <string name="test_wake_done">Wake signal sent &amp; WakeLock released.</string>
+    <string name="test_wake_already_on">Screen was already ON when timer finished. Lock the screen during the countdown to test screen-off wake.</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_section_behavior">Behavior</string>
+    <string name="settings_boot_title">Enable on boot</string>
+    <string name="settings_boot_desc">Automatically restart monitoring after phone reboot when the feature is enabled.</string>
+    <string name="settings_pocket_title">Pocket protection</string>
+    <string name="settings_pocket_desc">Use the proximity sensor to ignore taps while your phone is in a pocket or face down.</string>
+    <string name="settings_pocket_unavailable">Proximity sensor not found on this device.</string>
+
+    <string name="settings_section_sensitivity">Tap Sensitivity</string>
+    <string name="sensitivity_low">Low</string>
+    <string name="sensitivity_medium">Medium</string>
+    <string name="sensitivity_high">High</string>
+    <string name="sensitivity_low_desc">Requires firm taps (5.4 m/s²) · Best against accidental wakes</string>
+    <string name="sensitivity_medium_desc">Balanced tap force (3.6 m/s²) · Recommended for most phones</string>
+    <string name="sensitivity_high_desc">Light taps (2.3 m/s²) · Easier wake on desks or soft surfaces</string>
+
+    <string name="settings_section_battery">Battery Optimization</string>
+    <string name="battery_status_unrestricted">Unrestricted</string>
+    <string name="battery_status_optimized">Battery Optimized</string>
+    <string name="battery_info_body">Sensors are completely unregistered while your screen is ON to preserve battery. However, Android Doze and manufacturer battery savers may suspend background sensor listening while idle. Setting this app to Unrestricted improves reliability.</string>
+    <string name="battery_open_settings">Open Battery Optimization Settings</string>
+
+    <string name="settings_section_privacy">Privacy &amp; Permissions</string>
+    <string name="privacy_badges">No Internet · No Analytics · No Ads · No Root · No AccessibilityService</string>
+    <string name="perm_wake_lock_title">WAKE_LOCK</string>
+    <string name="perm_wake_lock_desc">Wakes the display briefly via PowerManager and releases immediately.</string>
+    <string name="perm_fgs_title">FOREGROUND_SERVICE (specialUse)</string>
+    <string name="perm_fgs_desc">Keeps screen-off sensor listening running reliably after you close the app.</string>
+    <string name="perm_boot_title">RECEIVE_BOOT_COMPLETED</string>
+    <string name="perm_boot_desc">Restores the service automatically after a device restart.</string>
+    <string name="perm_notif_title">POST_NOTIFICATIONS (Android 13+)</string>
+    <string name="perm_notif_desc">Displays the required transparent foreground status notification.</string>
+    <string name="why_no_accessibility">Why no AccessibilityService? Android disables the capacitive touch digitizer when the screen is off, so AccessibilityService cannot receive screen-off touches anyway and is not needed.</string>
+
+    <!-- OEM Specific Guidance -->
+    <string name="oem_samsung">Samsung One UI includes hardware-level \"Double tap to turn on screen\" in Settings → Advanced features → Motions and gestures. If using this app instead, exclude it from Sleeping Apps in Battery settings.</string>
+    <string name="oem_google">Google Pixel supports hardware-level \"Tap to check phone\" in Settings → Display → Lock screen. This app provides an accelerometer-based alternative.</string>
+    <string name="oem_xiaomi">Xiaomi / MIUI / HyperOS includes native \"Double tap to wake\" in Settings → Always-on display &amp; Lock screen. For background reliability, enable Autostart and set Battery saver to No restrictions.</string>
+    <string name="oem_oneplus_oppo">OnePlus / OPPO / Realme devices include native \"Double tap to wake\" under Settings → Special features / Gestures &amp; motions → Screen-off gestures. Disable battery optimization for reliable background wake.</string>
+    <string name="oem_motorola">Motorola devices offer native \"Tap to wake\" in Settings → Display → Peek Display / Lock screen. Exclude this app from battery optimization for best idle response.</string>
+    <string name="oem_huawei_honor">Huawei / Honor devices support native wake gestures under Settings → Accessibility features → Shortcuts &amp; gestures. Set App Launch to Manual for background reliability.</string>
+    <string name="oem_sony">Sony Xperia devices support Tap to wake in Settings → Display → Lock screen. Standard accelerometer listening pauses in Deep Doze unless a wake-up sensor is present.</string>
+    <string name="oem_generic">Standard Android disables capacitive touch when the screen is off. Check Settings → Display → Lock screen for native hardware Tap-to-Wake, or use this app\'s accelerometer tap detector.</string>
+</resources>

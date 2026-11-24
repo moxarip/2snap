@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">Double Tap Wake</string>
+
+    <!-- Navigation & Common -->
+    <string name="cd_open_settings">فتح الإعدادات</string>
+    <string name="cd_navigate_back">رجوع</string>
+    <string name="cd_power_toggle">تشغيل أو إيقاف Double Tap Wake</string>
+    <string name="cd_status_icon">مؤشر حالة الخدمة</string>
+    <string name="cd_close_dialog">إغلاق لوحة الاختبار</string>
+    <string name="action_close">إغلاق</string>
+
+    <!-- Main Screen -->
+    <string name="status_enabled">مُفعّل (Enabled)</string>
+    <string name="status_disabled">متوقف (Disabled)</string>
+    <string name="toggle_on">ON</string>
+    <string name="toggle_off">OFF</string>
+    <string name="subtitle_active_waiting">يعمل عند إطفاء الشاشة · خامل أثناء استخدام الهاتف</string>
+    <string name="subtitle_active_listening">يستمع الآن للنقرتين لإيقاظ الشاشة</string>
+    <string name="subtitle_inactive">اضغط على الزر لتفعيل اكتشاف النقرتين عند إطفاء الشاشة</string>
+    <string name="btn_test">اختبار (Test)</string>
+    <string name="btn_settings">الإعدادات</string>
+    <string name="btn_display_settings">إعدادات الشاشة</string>
+
+    <!-- How It Works -->
+    <string name="how_it_works_title">كيف تعمل الميزة؟</string>
+    <string name="how_it_works_body">يوقف Android شاشة اللمس عند إطفائها، لذا لا يمكن للتطبيقات العادية استقبال اللمس مباشرة. يراقب هذا التطبيق حساس الحركة فقط أثناء إطفاء الشاشة، ويكتشف نقرتين فيزيائيتين واضحتين، ثم يوقظ الشاشة عبر PowerManager ويحرر WakeLock فورًا.</string>
+    <string name="no_accelerometer_warning">لم يتم العثور على حساس التسارع (Accelerometer) في هذا الجهاز، لذا لا يمكن تفعيل الاكتشاف عبر الحساس.</string>
+
+    <!-- Device & OEM Card -->
+    <string name="device_support_title">دعم الجهاز والحساسات</string>
+    <string name="sensor_wakeup_badge">حساس Wake-Up</string>
+    <string name="sensor_standard_badge">حساس قياسي</string>
+    <string name="sensor_missing_badge">لا يوجد حساس تسارع</string>
+    <string name="proximity_available">حماية الجيب جاهزة</string>
+    <string name="proximity_unavailable">لا يوجد حساس تقارب</string>
+    <string name="oem_native_hint_label">دعم الشركة المصنعة</string>
+    <string name="oem_deep_doze_note">ملاحظة: في حال عدم وجود حساس Wake-Up مخصص، قد يوقف وضع Deep Doze الحساس بعد خمول طويل.</string>
+
+    <!-- Notification -->
+    <string name="notif_channel_name">خدمة Double Tap Wake</string>
+    <string name="notif_channel_desc">توضح أن مراقبة النقرتين أثناء إطفاء الشاشة نشطة في الخلفية.</string>
+    <string name="notif_title_active">Double Tap Wake نشط</string>
+    <string name="notif_body_waiting">خامل أثناء تشغيل الشاشة · جاهز فور إطفائها</string>
+    <string name="notif_body_listening">يستمع للنقرتين · %1$s</string>
+    <string name="notif_action_stop">إيقاف</string>
+    <string name="notif_boot_blocked_title">استئناف Double Tap Wake</string>
+    <string name="notif_boot_blocked_body">قيّد النظام التشغيل التلقائي بعد إعادة التشغيل. اضغط هنا للتشغيل.</string>
+
+    <!-- Notification Permission Banner -->
+    <string name="notif_permission_title">صلاحية الإشعارات مطلوبة</string>
+    <string name="notif_permission_body">يتطلب Android 13+ صلاحية الإشعارات لعرض حالة الخدمة في الخلفية بشفافية.</string>
+    <string name="notif_permission_grant">سماح</string>
+
+    <!-- Test Panel -->
+    <string name="test_sheet_title">اختبار الحساس والإيقاظ</string>
+    <string name="test_live_section">1. معايرة النقرتين مباشرة</string>
+    <string name="test_live_hint">انقر مرتين بوضوح على زجاج الشاشة أو ظهر الهاتف الآن للتحقق من مستوى الحساسية.</string>
+    <string name="test_state_ready">بانتظار نقرتين واضحتين…</string>
+    <string name="test_state_first_tap">تم رصد النقرة الأولى — انقر مرة ثانية!</string>
+    <string name="test_state_double_tap">تم اكتشاف النقرتين بنجاح!</string>
+    <string name="test_state_noise">تم تجاهل الحركة (فلتر منع الاهتزاز)</string>
+    <string name="test_impulse_label">النبضة: %1$.1f m/s² (الحد %2$.1f)</string>
+    <string name="test_wake_section">2. اختبار إيقاظ الشاشة المطفأة</string>
+    <string name="test_wake_hint">ابدأ مؤقت 5 ثوانٍ ثم أغلق الشاشة بزر الطاقة فورًا. سيقوم التطبيق بإرسال أمر الإيقاظ الرسمي عبر PowerManager وتحرير WakeLock مباشرة.</string>
+    <string name="test_wake_start">اختبار الإيقاظ خلال 5 ثوانٍ</string>
+    <string name="test_wake_cancel">إلغاء (%1$dث)</string>
+    <string name="test_wake_done">تم إرسال أمر الإيقاظ وتحرير WakeLock.</string>
+    <string name="test_wake_already_on">كانت الشاشة مضاءة عند انتهاء المؤقت. أطفئ الشاشة أثناء العد التنازلي لاختبار الإيقاظ.</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">الإعدادات</string>
+    <string name="settings_section_behavior">السلوك</string>
+    <string name="settings_boot_title">التشغيل عند إقلاع الهاتف (Enable on boot)</string>
+    <string name="settings_boot_desc">إعادة تشغيل الخدمة تلقائيًا بعد إعادة تشغيل الهاتف طالما الميزة مفعلة.</string>
+    <string name="settings_pocket_title">حماية الجيب</string>
+    <string name="settings_pocket_desc">استخدام حساس التقارب لتجاهل النقرات عندما يكون الهاتف في الجيب أو مقلوبًا.</string>
+    <string name="settings_pocket_unavailable">لا يتوفر حساس تقارب في هذا الجهاز.</string>
+
+    <string name="settings_section_sensitivity">حساسية النقر (Sensitivity)</string>
+    <string name="sensitivity_low">منخفضة</string>
+    <string name="sensitivity_medium">متوسطة</string>
+    <string name="sensitivity_high">عالية</string>
+    <string name="sensitivity_low_desc">تتطلب نقرة قوية (5.4 m/s²) · الأفضل لتقليل الإيقاظ العشوائي</string>
+    <string name="sensitivity_medium_desc">قوة نقر متوازنة (3.6 m/s²) · موصى بها لمعظم الهواتف</string>
+    <string name="sensitivity_high_desc">نقرات خفيفة (2.3 m/s²) · أسهل على المكتب أو الأسطح اللينة</string>
+
+    <string name="settings_section_battery">تحسين البطارية (Battery Optimization)</string>
+    <string name="battery_status_unrestricted">غير مقيّد</string>
+    <string name="battery_status_optimized">مُحسّن للبطارية</string>
+    <string name="battery_info_body">يتم إيقاف الحساسات تمامًا أثناء تشغيل الشاشة للحفاظ على البطارية. لكن وضع Android Doze وموفّر الطاقة في بعض الشركات قد يوقف الخدمة أثناء الخمول؛ اختيار "غير مقيّد" يحسّن الاستجابة.</string>
+    <string name="battery_open_settings">فتح إعدادات تحسين البطارية</string>
+
+    <string name="settings_section_privacy">الخصوصية والصلاحيات</string>
+    <string name="privacy_badges">بدون إنترنت · بدون جمع بيانات · بدون إعلانات · بدون روت · بدون AccessibilityService</string>
+    <string name="perm_wake_lock_title">WAKE_LOCK</string>
+    <string name="perm_wake_lock_desc">لإيقاظ الشاشة للحظات عبر PowerManager ثم تحرير القفل فورًا.</string>
+    <string name="perm_fgs_title">FOREGROUND_SERVICE (specialUse)</string>
+    <string name="perm_fgs_desc">لإبقاء مراقبة حساس الحركة نشطة بعد إغلاق واجهة التطبيق.</string>
+    <string name="perm_boot_title">RECEIVE_BOOT_COMPLETED</string>
+    <string name="perm_boot_desc">لإعادة تشغيل الخدمة تلقائيًا بعد إعادة تشغيل الجهاز.</string>
+    <string name="perm_notif_title">POST_NOTIFICATIONS (Android 13+)</string>
+    <string name="perm_notif_desc">لعرض إشعار الحالة الواضح المطلوب للخدمة في الخلفية.</string>
+    <string name="why_no_accessibility">لماذا لم نستخدم AccessibilityService؟ لأن Android يوقف حساس اللمس عند إطفاء الشاشة، وبالتالي لا تستطيع خدمة إمكانية الوصول استقبال اللمس وهي مطفأة، ولا داعي لطلبها.</string>
+
+    <!-- OEM Specific Guidance -->
+    <string name="oem_samsung">توفّر أجهزة Samsung One UI ميزة مدمجة على مستوى العتاد باسم \"النقر المزدوج لتشغيل الشاشة\" في الإعدادات ← الميزات المتقدمة ← الحركات والإيماءات. لاستخدام هذا التطبيق، استثنه من التطبيقات الساكنة في البطارية.</string>
+    <string name="oem_google">توفّر أجهزة Google Pixel ميزة مدمجة باسم \"النقر لفحص الهاتف\" في الإعدادات ← الشاشة ← شاشة القفل. هذا التطبيق يوفّر بديلاً يعتمد على حساس التسارع.</string>
+    <string name="oem_xiaomi">توفّر أجهزة Xiaomi / MIUI / HyperOS ميزة \"النقر المزدوج للإيقاظ\" في الإعدادات ← الشاشة الدائمة وشاشة القفل. لثبات الخدمة بالخلفية فعّل البدء التلقائي واختر \"بلا قيود\" في البطارية.</string>
+    <string name="oem_oneplus_oppo">توفّر أجهزة OnePlus / OPPO / Realme الميزة مدمجة في الإعدادات ← الميزات الخاصة / الإيماءات والحركات ← إيماءات إيقاف الشاشة.</string>
+    <string name="oem_motorola">توفّر أجهزة Motorola ميزة الإيقاظ بالنقر ضمن إعدادات الشاشة وشاشة القفل. استثنِ التطبيق من تحسين البطارية لأفضل استجابة.</string>
+    <string name="oem_huawei_honor">توفّر أجهزة Huawei / Honor إيماءات الإيقاظ ضمن إعدادات ميزات إمكانية الوصول ← الاختصارات والإيماءات. اجعل إدارة تشغيل التطبيق يدوية لضمان استمرار الخدمة.</string>
+    <string name="oem_sony">توفّر أجهزة Sony Xperia خيار النقر للإيقاظ في إعدادات الشاشة ← شاشة القفل. تتوقف الحساسات القياسية في وضع Deep Doze ما لم يتوفر حساس Wake-Up.</string>
+    <string name="oem_generic">يوقف نظام Android القياسي شاشة اللمس عند إطفائها. تحقق من إعدادات الشاشة ← شاشة القفل لوجود دعم مدمج من المصنّع، أو استخدم كاشف النقرتين عبر حساس الحركة في هذا التطبيق.</string>
+</resources>

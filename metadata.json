@@ -1,0 +1,6 @@
+{
+  "name": "Double Tap Wake",
+  "description": "Minimalist sensor-based Double Tap to Wake utility for Android with pocket protection, boot persistence, and zero data collection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
